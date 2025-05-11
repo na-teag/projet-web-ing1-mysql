@@ -21,7 +21,7 @@ class CatalogTest extends TestCase
         $this->seed([CategorySeeder::class, ProductSeeder::class]);
 
         $maxCategory = Category::max('category_id');
-        $category = fake()->numberBetween(0, $maxCategory);
+        $category = fake()->numberBetween(1, $maxCategory);
 
         $defaultCategory = $this->get("/catalog/products?category=" . $category);
 
