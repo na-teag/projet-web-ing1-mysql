@@ -36,7 +36,7 @@ async function getProducts(category) {
 
 async function loadProducts(t) {
     const params = new URLSearchParams(window.location.search)
-    products = await getProducts(params.has("category") ? params.get("category") : 0)
+    products = await getProducts(params.has("category") ? params.get("category") : 12)
     token = t
 }
 
@@ -60,8 +60,7 @@ async function showProduct(id) {
 
     details.hidden = false
     icon.src = `/product/${product.icon}`
-	const product_name = product.name.charAt(0).toUpperCase() + product.name.slice(1)
-    name.innerHTML = product_name
+    name.innerHTML = product.name.charAt(0).toUpperCase() + product.name.slice(1)
     price.innerHTML = `${product.unit_price}€`
     available.innerHTML = product.amount
     inCart.innerHTML = product.in_cart

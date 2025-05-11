@@ -13,7 +13,7 @@ class CategorySeeder extends Seeder
     public function run(): void
     {
         Category::create([
-            "id" => 0,
+            "id" => 12,
             "name" => "armures",
             "icon" => "Haut_fourneau_allume.webp"
         ]);

@@ -13,7 +13,7 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        $armors = Category::find(0);
+        $armors = Category::find(12);
         $textiles = Category::find(1);
         $books = Category::find(2);
         $meat = Category::find(3);
